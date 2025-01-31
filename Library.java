@@ -17,6 +17,7 @@ public class Library {
     // Funcionalidad para listar todos los libros
     public void listBooks() {
         System.out.println("Lista de libros:");
+	Collections.sort(books, Comparator.comparing(Book::getTitle));
         for (Book book : books) {
             System.out.println(book);
         }
@@ -32,5 +33,7 @@ public class Library {
         return null;
     }
 }
+
+
 
 
