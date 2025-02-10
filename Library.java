@@ -1,3 +1,4 @@
+package gh;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,13 @@ public class Library {
 
     // Funcionalidad para agregar un libro
     public void addBook(Book book) {
-        books.add(book);
+    	if(books.contains(book)) {
+    		System.out.println("Ya existe el libro");
+    	}
+        
+    	else{
+    		books.add(book);
+    	}
         System.out.println("Libro agregado: " + book);
     }
 
@@ -23,6 +30,7 @@ public class Library {
     }
 
     // Funcionalidad para buscar un libro por título
+  
     public Book findBook(String title, String author){
        for (Book book: books) {
            if (title != null && author != null){
@@ -41,3 +49,4 @@ public class Library {
 
      return null;
 }
+
