@@ -30,12 +30,23 @@ public class Library {
     }
 
     // Funcionalidad para buscar un libro por título
-    public Book findBookByTitle(String title) {
-        for (Book book : books) {
-            if (book.getTitle().equalsIgnoreCase(title)) {
-                return book;
-            }
-        }
-        return null;
-    }
+  
+    public Book findBook(String title, String author){
+       for (Book book: books) {
+           if (title != null && author != null){
+              if( book.getTitle().equalsIgnoreCase(title) && book.getAuthor().equalsIgnoreCase(author)){
+                  return book;
+               }
+             }
+        else if (title != null) && book.getTitle().equalsIgnoreCase(title)) {
+            return book;
+        else if(author !=null) && book.getAuthor(). equalsIgnoreCase(author)){
+            return book;
+
+       }
+
+     }
+
+     return null;
 }
+
